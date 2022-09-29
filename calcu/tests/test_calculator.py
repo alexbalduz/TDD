@@ -1,7 +1,7 @@
 # Cargamos el módulo unittest
 import unittest
 # Importamos la clase calculadora
-from calculator import Calculator
+from prueba import Calculator
 
 # Creamos una clase heredando de TestCase
 class TestMyCalculator(unittest.TestCase):
@@ -18,3 +18,4 @@ class TestMyCalculator(unittest.TestCase):
         # Ejecutamos el método
         self.calc.add(1, 3)
         # Comprobamos si el valor es el que esperamos self.assertEqual(4, self.calc.value)
+        self.assertEqual(4, self.calc.value)
