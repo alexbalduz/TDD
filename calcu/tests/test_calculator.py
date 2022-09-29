@@ -1,7 +1,7 @@
 # Cargamos el módulo unittest
 import unittest
 # Importamos la clase calculadora
-from prueba import Calculator
+from prueba.calculadora import Calculator
 
 # Creamos una clase heredando de TestCase
 class TestMyCalculator(unittest.TestCase):
@@ -14,8 +14,29 @@ class TestMyCalculator(unittest.TestCase):
         self.assertEqual(0, self.calc.value)
 
     # Creamos un nuevo test para comprobar una suma
-    def test_add_method(self):
+    def test_suma_method(self):
         # Ejecutamos el método
-        self.calc.add(1, 3)
+        self.calc.suma(1, 3)
+        # Comprobamos si el valor es el que esperamos self.assertEqual(4, self.calc.value)
+        self.assertEqual(4, self.calc.value)
+
+        # Creamos un nuevo test para comprobar una resta
+    def test_resta_method(self):
+        # Ejecutamos el método
+        self.calc.resta(1, 3)
+        # Comprobamos si el valor es el que esperamos self.assertEqual(4, self.calc.value)
+        self.assertEqual(4, self.calc.value)
+
+        # Creamos un nuevo test para comprobar una multiplicacion
+    def test_multiplicacion_method(self):
+        # Ejecutamos el método
+        self.calc.multiplicacion(1, 3)
+        # Comprobamos si el valor es el que esperamos self.assertEqual(4, self.calc.value)
+        self.assertEqual(4, self.calc.value)
+
+        # Creamos un nuevo test para comprobar una division
+    def test_division_method(self):
+        # Ejecutamos el método
+        self.calc.division(1, 3)
         # Comprobamos si el valor es el que esperamos self.assertEqual(4, self.calc.value)
         self.assertEqual(4, self.calc.value)
